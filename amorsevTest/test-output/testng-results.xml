@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-28T04:21:51 WAT" name="Default suite" finished-at="2024-06-28T04:22:24 WAT" duration-ms="32646">
+    <groups>
+    </groups>
+    <test started-at="2024-06-28T04:21:51 WAT" name="Default test" finished-at="2024-06-28T04:22:24 WAT" duration-ms="32646">
+      <class name="amorsevTest.loginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:amorsevTest.loginTest@40ef3420]" started-at="2024-06-28T04:21:51 WAT" name="setUp" finished-at="2024-06-28T04:21:58 WAT" duration-ms="6945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@40ef3420]" started-at="2024-06-28T04:21:58 WAT" name="invalidCredentialsLoginTest" finished-at="2024-06-28T04:22:14 WAT" duration-ms="15945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialsLoginTest -->
+        <test-method signature="validCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@40ef3420]" started-at="2024-06-28T04:22:14 WAT" name="validCredentialsLoginTest" finished-at="2024-06-28T04:22:24 WAT" duration-ms="9607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCredentialsLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:amorsevTest.loginTest@40ef3420]" started-at="2024-06-28T04:22:24 WAT" name="tearDown" finished-at="2024-06-28T04:22:24 WAT" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- amorsevTest.loginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
