@@ -31,8 +31,8 @@ jobs:
         working-directory: ./amorsevTest  # Set the working directory to where your pom.xml is located
 
     # Optional: Upload TestNG test results
-    - name: Archive test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
-        path: amorsevTest/target/surefire-reports  # Adjust the path if needed
+    #- name: Archive test results
+      #uses: actions/upload-artifact@v3
+      #with:
+        #name: test-results
+        #path: amorsevTest/target/surefire-reports  # Adjust the path if needed
