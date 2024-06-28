@@ -23,6 +23,6 @@ jobs:
 
     - name: Build and Test with Maven
       run: |
-        cd amorsevSeleniumLoginTest/amorsevSeleniumLoginTest
+        cd amorsevSeleniumLoginTest/amorsevSeleniumLoginTest/amorsevTest
         mvn clean install
         mvn test
