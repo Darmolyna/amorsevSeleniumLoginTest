@@ -4,6 +4,13 @@
   <artifactId>amorsevTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
+	  <dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.10.2</version>
+	    <scope>compile</scope>
+	</dependency>
+	
 	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 	<dependency>
 	    <groupId>org.apache.maven.plugins</groupId>
@@ -26,12 +33,7 @@
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-	<dependency>
-	    <groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>7.10.2</version>
-	    <scope>test</scope>
-	</dependency>
+	
 
   </dependencies>
   <build>

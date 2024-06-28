@@ -1,9 +1,14 @@
 package amorsevTest;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
+import java.time.Duration;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,60 +16,66 @@ import org.testng.annotations.Test;
 
 public class loginTest {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeClass
     public void setUp() {
         System.setProperty("webdriver.chrome.driver",
                 "/Users/blessingolaiya/Desktop/SeleniumAutomation/drivers/chromedriver-mac-x64/chromedriver");
         driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
-    
     @Test
     public void validCredentialsLoginTest() {
-    	
         driver.get("https://www.demoblaze.com/");
-        
-        driver.findElement(By.id("login2")).click();
-        driver.findElement(By.id("loginusername")).sendKeys("darmolyn");
-        driver.findElement(By.id("loginpassword")).sendKeys("schoolbag");
-        
-        WebElement loginButton = driver.findElement(By.cssSelector(".btn.btn-primary"));
-        
-        Assert.assertTrue(loginButton.getText().contains("Log In"),
-        		"Button text does not contain 'Log In'");
-        
+
+        WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.id("login2")));
+        loginLink.click();
+
+        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+        usernameField.sendKeys("darmolyn");
+
+        WebElement passwordField = driver.findElement(By.id("loginpassword"));
+        passwordField.sendKeys("schoolbag");
+
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Log in']")));
+
+
+   
         loginButton.click();
-        
-        WebElement welcomeMessage = driver.findElement(By.id("nameofuser"));
-        
+
+
+        WebElement welcomeMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser")));
         Assert.assertTrue(welcomeMessage.getText().contains("Welcome darmolyn"),
-        		"Login Not Successfull");
-    }
-    @Test
-    public void invalidCredentialsLoginTest() {
-    	
-        driver.get("https://www.demoblaze.com/");
-        
-        driver.findElement(By.id("login2")).click();
-        driver.findElement(By.id("loginusername")).sendKeys("darmol");
-        driver.findElement(By.id("loginpassword")).sendKeys("schoolb");
-        
-        WebElement loginButton = driver.findElement(By.cssSelector(".btn.btn-primary"));
-        
-        Assert.assertTrue(loginButton.getText().contains("Log In"),
-        		"Button text does not contain 'Log In'");
-        loginButton.click();
-        
-        System.out.println(driver.switchTo().alert().getText());
-        driver.switchTo().alert().accept();
+                "Login Not Successful");
     }
 
+    @Test
+    public void invalidCredentialsLoginTest() {
+    	driver.get("https://www.demoblaze.com/");
+
+        WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.id("login2")));
+        loginLink.click();
+
+        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+        usernameField.sendKeys("darmol");
+
+        WebElement passwordField = driver.findElement(By.id("loginpassword"));
+        passwordField.sendKeys("schoolb");
+
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Log in']")));
+        loginButton.click();
+
+
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        System.out.println(alert.getText());
+        alert.accept();    }
 
     @AfterClass
     public void tearDown() {
         if (driver != null) {
-            driver.close();
+            driver.quit();
         }
     }
 }
