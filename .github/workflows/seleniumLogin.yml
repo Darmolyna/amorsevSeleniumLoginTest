@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    name: Standard Checkout
+    - name: Standard Checkout
       uses: actions/checkout@v2
 
     - name: Set up JDK 17
