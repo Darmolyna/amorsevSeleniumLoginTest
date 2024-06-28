@@ -19,12 +19,12 @@
 	</dependency>
 
 	
-	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
 	<dependency>
 	    <groupId>org.apache.maven.plugins</groupId>
 	    <artifactId>maven-surefire-plugin</artifactId>
 	    <version>3.3.0</version>
-	</dependency>
+	</dependency> -->
 
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java-->
 	<dependency>
@@ -48,7 +48,17 @@
         </configuration>
       </plugin>
       
-
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
       
     </plugins>
   </build>
