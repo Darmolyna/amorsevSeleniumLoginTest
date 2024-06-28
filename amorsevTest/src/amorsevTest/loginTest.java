@@ -13,15 +13,16 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class loginTest {
-    private WebDriver driver;
+	WebDriver driver;
     private WebDriverWait wait;
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver",
-                "/Users/blessingolaiya/Desktop/SeleniumAutomation/drivers/chromedriver-mac-x64/chromedriver");
+    	WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }

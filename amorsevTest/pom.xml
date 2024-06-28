@@ -11,6 +11,14 @@
 	    <scope>compile</scope>
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+	<dependency>
+	    <groupId>io.github.bonigarcia</groupId>
+	    <artifactId>webdrivermanager</artifactId>
+	    <version>5.9.1</version>
+	</dependency>
+
+	
 	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 	<dependency>
 	    <groupId>org.apache.maven.plugins</groupId>
