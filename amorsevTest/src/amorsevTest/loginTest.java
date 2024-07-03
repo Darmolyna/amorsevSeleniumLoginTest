@@ -23,7 +23,7 @@ public class loginTest {
 
     @BeforeClass
     public void setUp() {
-WebDriverManager.chromedriver().setup();
+    	WebDriverManager.chromedriver().setup();
         
         // Set ChromeOptions to run Chrome in headless mode
         ChromeOptions options = new ChromeOptions();

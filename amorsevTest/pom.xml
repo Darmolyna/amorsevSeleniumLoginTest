@@ -4,6 +4,8 @@
   <artifactId>amorsevTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
+	  
+	  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	  <dependency>
 	    <groupId>org.testng</groupId>
 	    <artifactId>testng</artifactId>
@@ -18,23 +20,12 @@
 	    <version>5.9.1</version>
 	</dependency>
 
-	
-	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
-	<dependency>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-surefire-plugin</artifactId>
-	    <version>3.3.0</version>
-	</dependency> -->
-
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java-->
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
 	    <version>4.22.0</version>
 	</dependency> 
-	
-	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-	
 
   </dependencies>
   <build>
