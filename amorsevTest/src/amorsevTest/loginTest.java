@@ -53,9 +53,6 @@ public class loginTest {
         passwordField.sendKeys("schoolbag");
 
         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Log in']")));
-
-
-   
         loginButton.click();
 
 
@@ -83,7 +80,8 @@ public class loginTest {
 
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         System.out.println(alert.getText());
-        alert.accept();    }
+        alert.accept(); 
+     }
 
     @AfterClass
     public void tearDown() {

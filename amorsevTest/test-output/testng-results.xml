@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-03T00:23:45 WAT" name="Suite" finished-at="2024-07-03T00:24:14 WAT" duration-ms="28649">
+  <suite started-at="2024-07-03T18:13:14 WAT" name="Suite" finished-at="2024-07-03T18:13:49 WAT" duration-ms="34511">
     <groups>
     </groups>
-    <test started-at="2024-07-03T00:23:45 WAT" name="Test" finished-at="2024-07-03T00:24:14 WAT" duration-ms="28649">
+    <test started-at="2024-07-03T18:13:14 WAT" name="Test" finished-at="2024-07-03T18:13:49 WAT" duration-ms="34511">
       <class name="amorsevTest.loginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T00:23:45 WAT" name="setUp" finished-at="2024-07-03T00:23:48 WAT" duration-ms="2630" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T18:13:14 WAT" name="setUp" finished-at="2024-07-03T18:13:19 WAT" duration-ms="4153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invalidCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T00:23:48 WAT" name="invalidCredentialsLoginTest" finished-at="2024-07-03T00:24:00 WAT" duration-ms="11891" status="PASS">
+        <test-method signature="invalidCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T18:13:19 WAT" name="invalidCredentialsLoginTest" finished-at="2024-07-03T18:13:31 WAT" duration-ms="12634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialsLoginTest -->
-        <test-method signature="validCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T00:24:00 WAT" name="validCredentialsLoginTest" finished-at="2024-07-03T00:24:14 WAT" duration-ms="14015" status="PASS">
+        <test-method signature="validCredentialsLoginTest()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T18:13:31 WAT" name="validCredentialsLoginTest" finished-at="2024-07-03T18:13:49 WAT" duration-ms="17611" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validCredentialsLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T00:24:14 WAT" name="tearDown" finished-at="2024-07-03T00:24:14 WAT" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:amorsevTest.loginTest@7334aada]" started-at="2024-07-03T18:13:49 WAT" name="tearDown" finished-at="2024-07-03T18:13:49 WAT" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
